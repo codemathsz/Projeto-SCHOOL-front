@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- VERSÃO 4.7.0 PARA PUXAR OS ICONS PARA O HTML -->
+    <title>Escola Cultural da Música</title><!-- NOME DA ESCOLA -->
+    <link rel="stylesheet" href="./Css/StylePqNos.css"><!-- LINKANDO O CSS -->
+    <!--  FONTS CONTEUDO CABECALHO p -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="Principal">
+        <!-- INICIANDO A SECTION PRINCIPAL DA PARTE DE CIMA -->
+        <div class="Transparencia"></div>
+
+        <div class="Centro"> 
+
+            <header>
+
+                <div class="Icones-Sociais">
+                    <!-- PUXEI O ICON NO https://www.w3schools.com/icons/fontawesome_icons_brand.asp -->
+                    <a href="https:/facebook.com" target="blank"><i class="fa fa-facebook-square"></i></a>            
+                    <a href="https:instagram.com" target="blank"><i class="fa fa-instagram"></i></a>
+
+                </div><!-- FECHANDO ICONESS-SOCIAIS -->
+
+                <div class="Clear"></div><!-- Clear serve para se adequar a (Div mãe) -->
+                <div class="Logo">
+
+                    Escola Cultural da Música
+
+                </div><!-- FECHANDO LOGO -->
+
+                <nav class="Desktop ">
+
+                    <ul>
+                        <li><a href="../Index.html" >Inicio</a></li>
+                        <li><a href="../PageCorpoDocente/CorpoDocent.html" >Corpo Docente</a></li>
+                        <li><a href="./PorqNos.html" id="selecionado">Por que Nós</a></li>
+                        <li><a href="../PageDepoimentos/Depoimentos.html">Depoimentos</a></li>
+                    </ul>
+
+                </nav><!-- FECHANDO DESKTOP -->
+
+                <nav class="Mobile">
+
+                    <i class="fa fa-bars"></i>
+
+                    <ul class="linha" >
+                        <li><a href="../Index.html" >Inicio</a></li>
+                        <li ><a href="../PageCorpoDocente/CorpoDocent.html" >Corpo Docente</a></li>
+                        <li id="selecionado"><a href="./PorqNos.html" id="selecionado">Por que Nós</a></li>
+                        <li><a href="../PageDepoimentos/Depoimentos.html">Depoimentos</a></li>
+                    </ul>
+
+                </nav><!-- FECHANDO MOBILE -->
+                <div class="Clear"></div><!-- Clear serve para se adequar a (Div mãe) -->
+            </header><!-- FECHANDO O HEADER -->
+
+
+            <div class="Conteudo-Cabecalho">
+
+                <h2>Por Que <span>Nós!?</span></h2>
+
+            </div><!--  FECHANDO CONTEUDO CABECALHO -->
+
+        </div><!-- ESTOU FECHANDO CENTRO -->
+        
+    </section><!-- FECHANDO A SECTION PRINCIPAL DA PARTE DE CIMA -->
+    <section class="Usando_Z-index"> <!--  ABRINDO SECTION USANDO_Z-INDEX -->
+        <div class="PorQueNos">
+            <div class="Texto-PorQueNos">
+                <p>
+                    Estamos a 53 anos formando grandes músicos, e ao longo desse tempo
+                    ganhamos reconhecimento no mercado e com isso o prêmio de Escola
+                    5 estrela. Temos um grupo de professores capacitados e prêmiados no 
+                    universo da música, os Alunos apresentam em concertos e ao final do 
+                    curso oferecemos um intercâmbio para conhecerem países em que foi
+                    originado os estilos de música e os intrumentos, e ainda eles tem aulas
+                    com escolas parceiras nesses países: Alemanha, Roma, Inglaterra, Rússia
+                    Italia...
+
+                </p>
+            </div>
+        </div>
+    </section><!--  FECHANDO SECTION USANDO_Z-INDEX  -->
+    <!-- JAVASCRIPT DO MENU MOBILE -->
+    <script src="./Js/ajax-jquery.js"></script>
+    <script>
+
+        $(function () {
+
+            $('nav.Mobile i').click(function () {
+
+                var clicando = $(this).parent().find('ul.linha')/*find, trazendo a lista 'estorando na tela, tambem tem o slide,' é como vai se apresentar na tela*/
+                if (clicando.is(':visible') == false) {
+                    clicando.fadeIn();
+                } else {
+
+                    clicando.fadeOut();
+                }
+            })
+        })
+
+    </script>
+
+    <!--  JavaScript da navBar  -->
+    <script>
+        window.addEventListener('scroll', function(){
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+    </script>
+</body>
+</html>

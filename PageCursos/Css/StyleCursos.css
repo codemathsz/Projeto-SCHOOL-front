@@ -1,0 +1,415 @@
+*{/* FOLHA DE ESTILO */
+
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body::-webkit-scrollbar{
+    width: 0.5em;
+    height: 1px;
+    
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+    
+}
+html, body{
+
+    height: 100%;/* ALTURA DA PÁGINA */ /* A LARGURA SE DEFINE SOZINHA */
+
+}
+
+/* INICIANDO CLASSES AUXILIARES */
+
+section.Principal{/* DESSE JEITO SERVE PARA MOSTRAR O CAMINHO */
+
+    position: relative;
+    background-image: url('../Img/Fundo-Colorido-sound.jpg');
+    background-size: 75em;/* SE AJUSTA EM RELAÇÃO A TELA */
+    background-position: center;
+    width: 100%;
+    padding: 0.9em 0em;
+    height: 20%;
+    background-attachment: local;/*  Imagem fica fixa */
+}
+
+.Centro{
+
+    margin:  0 auto;
+    max-width: 80em;
+    padding: 0 2%;
+
+}
+
+.Clear{
+
+    clear: both;
+
+}
+.Transparencia{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 27, 27, 0.7);
+    z-index: 1;/* O EIXO  Z É O EIXO RESPONSÁVEL PELO CÁLCULO E POSCIONAMENTO DA PROFUNDIDADE DE ALGUM ELEMENTO*/
+}
+
+section.Principal header{
+    background-color: rgb(150, 150, 150);
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 0.625em;
+    border-bottom: 3px solid #bf8f65;
+    border-radius: 5px;
+    z-index: 2;
+    transition-duration: 1.5s;
+}
+section.Principal header:hover{
+    background-color:rgb(255, 255, 255) ;
+    transition-duration: 1.5s;
+}
+.Icones-Sociais{
+    float: right;
+}
+
+.Icones-Sociais a{
+
+    color: #212529;
+    text-decoration: none;
+    font-size: 1.3125em;
+    font-weight: bold;
+}
+
+.Logo{
+    margin: 0 auto;
+    margin-left: 1em;
+    float: left;
+    color: #212529;
+    font-size: 1.5625em;
+    font-weight: bold;
+    
+}
+
+nav.Desktop{
+
+    margin-top: 1.25em;
+    float: right;
+   
+}
+
+nav.Desktop ul{
+
+    list-style-type: none;/*  para tirar as conf padrão de uma lista */
+
+}
+
+nav.Desktop li{
+
+    display: inline-block;/*  para ficar um em baixo do outro */
+    margin:  0 0.9em;
+    font-size: 1.25em;
+    font-weight: lighter;
+    
+}
+
+nav.Desktop a{
+
+    color: #212529;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+nav.Desktop a:hover{
+    width: 100%;
+    color: #f2cda0;
+    transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);/*  efeito de como o link irá clariar */
+    
+}
+
+/*  personalizando os menus mobiles que ficaram escondidos */
+nav.Mobile{
+
+    display: none;
+    float: right;
+}
+
+nav.Mobile > i{/* MEXENDO NO CSS DO HAMBURGUE , NAV MOBILE */
+
+    top: 0.3em;
+    font-size: 2em;
+    color: #f2cda0;
+    cursor: pointer;/* TORNOU O ICON CLICAVEL */
+    position: relative;
+    
+}
+
+nav.Mobile ul{/* MEXENDO NO CSS DO HAMBURGUE , NAV MOBILE */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 5.87em;
+    width: 100%;
+    background: #f2cda0;
+    list-style-type: none;
+
+}
+
+nav.Mobile li{/* MEXENDO NO CSS DO HAMBURGUE , NAV MOBILE */
+
+    font-weight: lighter;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    padding: 0.5em 0;
+
+}
+
+nav.Mobile a{/* MEXENDO NO CSS DO HAMBURGUE , NAV MOBILE */
+    padding: 0;
+    display: block;
+    text-decoration: none;
+    color: #0d0d0d;
+    text-transform: uppercase;/* DEIXAR TUDO EM MAIUSCULO */
+
+}
+.Conteudo-Cabecalho{
+    /*  PARA FICAR POR CIMA DA IMG */
+    position: relative;/*  FICAR RELATIVE */
+    z-index: 1;/*  SELECIONADO COMO ELEMENTO 1º */
+    max-width: 43.75em;
+    margin: 0 auto;
+    margin-top: 6.875em;
+    text-align: justify;
+}
+.Conteudo-Cabecalho h2{
+    width: 60%;
+    text-align: center;
+    color: #bf8f65;
+    font-weight: bold;
+    font-size: min(2.8em, 8vw);
+    word-break: break-all;
+    
+}
+
+.Conteudo-Cabecalho h2 > span{color: #f2cda0;}
+
+.Conteudo-Cabecalho p{
+    
+    color:#bf8f65;
+    margin-top: 1.1875em;
+    font-size: /* 1.063em */ calc(60% + 0.8vmin);
+    
+}
+
+.Conteudo-Cabecalho a{
+
+    display: block;
+    width: 22.8%;
+    height: 2.875em;
+    background: #0d0d0d;
+    color: #f2cda0;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.1875em;
+    border-radius: 1.5625em;
+    line-height: 2.875em;
+}
+.Conteudo-Cabecalho a:hover{
+    opacity: 0.7;
+}
+#selecionado{
+    background-color: #0d0d0d;
+    color: #bf8f65;
+   opacity: 0.9;
+    
+}
+.Chamada-Cursos{
+
+    width: 100%;
+    text-align: center;
+    padding: 1.6875em 2%;
+    background: #0d0d0d;
+}
+
+.Chamada-Cursos h2{
+    display: inline-block;
+    color: #bf8f65;
+    text-transform: uppercase;
+    font-size: 1.6875em;
+}
+
+.Box-Cursos{
+
+    padding:  2.5em 0em;
+    height: 100%;
+    border-bottom: #f2cda0 3px solid;
+
+}
+
+.Box-Cursos > .Centro{
+     
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Box-Cursos-Individual{
+
+    width: 33.3%;
+    padding: 0em 2.5em;
+}
+
+.Box-Cursos-Conteudo{
+
+    border: 1.5px solid black;
+    box-shadow: 12px 15px 15px   black;
+    min-height: 18.75em;
+    background-image: url();
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.Box-Cursos-Individual h2{
+
+    background: #0d0d0d;
+    color: #bf8f65;
+    text-align: center;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+.Box-Cursos-Individual p{
+
+    margin-left: 1.25em;
+    color: #0d0d0d;
+    font-size: /* 1.0625em */ calc(60% + 0.8vm);
+    margin-top: 0.5625em;
+
+}
+
+.Pontos-Curso{
+
+    padding: 1.3em 0em 0.9em 0em;
+}
+
+.Preco{
+
+    margin-top: 0.63em;
+    padding: 0.9em 0;
+    text-align: center;
+}
+
+.Preco h2{
+
+    font-size: 1.5625em;
+    color: red;
+    padding: 0 1.25em;
+    background-color: transparent;
+    display: inline-block;
+    border-bottom: 2px solid gray;
+    box-shadow: 0px 6px 25px -8px black;
+    margin-top: 1.5em;
+    transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+.Preco h2:hover{
+
+    margin-top: 1.2em;
+    box-shadow: 2px 2px 15px #0d0d0d;
+}
+
+
+
+ 
+footer{
+
+    width: 100%;
+    padding: 0.875em 2%;
+    background: black;
+    color: white;
+    text-align: center;
+}
+/*  Iniciando responsividade */
+@media screen and (max-width:1700px) {
+    #Ajust-Hover{
+        height: 17em;
+    }
+    #ajuste-margin{
+        height: 17em;
+    }
+}
+ @media screen and (max-width:980px) {
+     
+    nav.Mobile {display: inline-block;}
+
+    nav.Desktop{display: none;}
+
+    
+
+ }
+ 
+@media screen and (max-width:768px) {
+
+
+    section.Box-Cursos > .Centro{
+        display: block; 
+        
+    }
+    .Box-Cursos-Individual{
+        width: 80%;
+        margin: auto;
+        margin-top: 1.5em;
+        text-align: center;
+        padding: 5px;
+    }
+    .Box-Cursos-Individual p{
+        font-size: 1.5em;
+        margin-left: 0;
+    }
+    .T50{
+        width: 100%;
+    }
+    
+
+}
+@media screen and (max-width:480px) {
+    .Conteudo-Cabecalho a{
+        width: 28.8%;
+    }
+    .Box-Cursos-Individual{
+        width: 100%;
+        margin: 1em 0;
+    }
+    .Conteudo-Cabecalho h2{
+        word-break: break-all;
+    }
+   
+}
+   
+@media screen and (max-width:324px) {
+    nav.Mobile > ul{
+        top: 6.5em;
+    }
+    .Conteudo-Cabecalho a{
+        width: 50%;
+    }
+   
+}
+@media screen and (max-width:298px) {
+    nav.Mobile > ul{
+        top: 8em;
+    }
+   
+}
+
+@media screen and (max-width:272px) {
+    
+  
+
+}
